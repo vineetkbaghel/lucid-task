@@ -1,13 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.input-container {
+  max-width: 90%;
+  min-width: 50%;
+  /* display: flex; */
+  /* flex: 1; */
+  padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+.tag-input{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag-input input{
+  padding: 5px;
+  outline: none;
+  border: 0;
+  flex: 1;
+}
+.input-container .tag {
+  padding: 5px;
+  border: 1px solid #aaa;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+}
+.input-container .tag span{
+  width: max-content;
+}
+
+.input-container .tag .icon{
+    margin-left: 5px;
+    cursor: pointer;
+    border:2px solid #fb6868;
+    border-radius: 50%;
+    padding: 2px 5px;
+}
+.formula-input {
+  width: max-content;
+  padding: 20px 10px;
+  position: relative;
+}
+ul {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: absolute;
+}
+li {
+  display: block;
+  transition-duration: 0.5s;
+  padding: 18px 15px;
+  background-color: #fff;
+  text-align: left;
+  border-bottom: 1px solid #bebebe;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  /* visibility: hidden; */
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  /* display: none; */
+}
+.filtered-el {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.filtered-el .flag {
+  color: rgb(125, 128, 128);
+}
+.symbol{
+  margin-top: 15px;
 }
